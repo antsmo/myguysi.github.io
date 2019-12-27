@@ -123,7 +123,6 @@ ul.list--compact > li + * {
     --color-text: var(--color-grey-20);
     --color-text-muted: var(--color-grey-40);
     --color-heading: var(--color-white);
-    --color-link: var(--color-orange);
     --color-divider: var(--color-grey-50);
   }
 }
