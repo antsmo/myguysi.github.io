@@ -1,0 +1,129 @@
+:root {
+  --color-grey-10: #F7F9FA;
+  --color-grey-20: #CBD9DC;
+  --color-grey-30: #9AB3B9;
+  --color-grey-40: #64868E;
+  --color-grey-50: #345961;
+  --color-grey-60: #203F46;
+  --color-grey-70: #162E33;
+  --color-grey-80: #0F1F22;
+  --color-grey-90: #091416;
+
+  --color-orange: #FF5F2E;
+  --color-yellow: #FCBE32;
+  --color-white: white;
+  --color-black: black;
+
+  /* Tokens */
+
+  --color-bg: var(--color-grey-10);
+  --color-text: var(--color-grey-50);
+  --color-text-muted: var(--color-grey-40);
+  --color-heading: var(--color-grey-70);
+  --color-link: var(--color-orange);
+  --color-divider: var(--color-grey-20);
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  padding: 1.5rem 1rem 3rem;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+a {
+  color: inherit;
+  text-decoration-color: var(--color-link);
+  text-decoration-thickness: 2px;
+}
+
+a:hover, a:focus {
+  background-color: var(--color-link);
+  outline: 2px solid var(--color-link);
+  color: white;
+}
+
+/* Typography */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--color-heading);
+}
+
+h2 {
+  border-bottom: 1px solid var(--color-divider);
+  padding-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.1875rem;
+}
+
+strong {
+  color: var(--color-heading);
+}
+
+header p {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+/* Structure */
+
+nav {
+  margin-bottom: 1rem;
+}
+
+article > footer {
+  margin-top: 2rem;
+}
+
+footer {
+  margin-top: 3rem;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+/* Classes */
+
+ul.list {
+  margin-top: 1.5rem;
+}
+
+ul.list li {
+  margin-top: 1rem;
+}
+
+ul.list--compact > li + * {
+  margin-top: 0.5rem;
+}
+
+/* Large viewports */
+
+@media screen and (min-width: 700px) {
+  body {
+    padding: 3rem 1rem;
+    max-width: 75ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: var(--color-grey-80);
+    --color-text: var(--color-grey-20);
+    --color-text-muted: var(--color-grey-40);
+    --color-heading: var(--color-white);
+    --color-link: var(--color-orange);
+    --color-divider: var(--color-grey-50);
+  }
+}
