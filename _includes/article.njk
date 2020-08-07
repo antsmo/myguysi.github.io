@@ -1,0 +1,14 @@
+---
+layout: main.njk
+---
+
+<nav>
+  <a href="/">Back to index</a>
+</nav>
+
+<article>
+  <h1>{{ title }}</h1>
+  <p>{{ date.toDateString() }}</p>
+
+  {{ content | safe }}
+</article>
